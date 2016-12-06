@@ -183,7 +183,7 @@ public class ChonMonHoc extends javax.swing.JFrame {
     }//GEN-LAST:event_lbQuanLiMonHocMouseClicked
 
     private void bOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bOKActionPerformed
-        try {
+        if ( !dsMonHoc.isEmpty()) {
             if (chooseSoanCauHoi) {
                 SoanCauHoi sch = new SoanCauHoi(this.monHocDaChon);
                 sch.setVisible(true);
@@ -196,7 +196,7 @@ public class ChonMonHoc extends javax.swing.JFrame {
             } else {
                 JOptionPane.showMessageDialog(null, "Chức năng chưa được cập nhật");
             }
-        } catch (Exception e) {
+        } else {
             JOptionPane.showMessageDialog(null, "Danh sách môn học trống! Hãy tạo môn học và tiếp tục");
         }
     }//GEN-LAST:event_bOKActionPerformed
